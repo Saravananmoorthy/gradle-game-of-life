@@ -1,5 +1,12 @@
 
 apply plugin: 'war'
+apply plugin: 'jetty'
+
+httpPort = 9090
+stopPort = 9999
+stopKey = 'gameoflife'
+
+[jettyRun, jettyRunWar].each { task -> task.contextPath = '/gameoflife' }
 
 description = 'gameoflife-web'
 dependencies {
