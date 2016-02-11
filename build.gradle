@@ -24,6 +24,11 @@ subprojects {
     exclude '**/integration/**/*'
   }
 
+  task intTest(type: Test, dependsOn: testClasses) {
+    include '**/integration/**/*'
+    reports.html.destination "$buildDir/reports/intTest"
+  }
+
   configurations.all {
 }
   dependencies {
