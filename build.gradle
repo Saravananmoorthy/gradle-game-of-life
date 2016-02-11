@@ -7,13 +7,21 @@ version = '1.0-SNAPSHOT'
 
 subprojects {
   apply plugin: 'java'
+  apply plugin: 'jacoco'
+
   sourceCompatibility = 1.7
   targetCompatibility = 1.7
 
   
   repositories {
     mavenLocal()
-    jCenter()
+    jcenter()
+  }
+
+  test {
+    include '**/When*.class'
+    include '**/*Test.class'
+    exclude '**/integration/**/*'
   }
 
   configurations.all {
