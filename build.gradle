@@ -8,6 +8,7 @@ version = '1.0-SNAPSHOT'
 subprojects {
   apply plugin: 'java'
   apply plugin: 'jacoco'
+  apply plugin: 'findbugs'
 
   sourceCompatibility = 1.7
   targetCompatibility = 1.7
@@ -38,6 +39,7 @@ subprojects {
     reports.html.destination "$buildDir/reports/jacoco/intTest"
   }
 
+  findbugsTest.enabled = false
   check.dependsOn(intTest)
   
   configurations.all {
