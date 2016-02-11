@@ -44,6 +44,7 @@ subprojects {
   pmdTest.enabled = false
   pmd.ruleSetFiles = files("$rootDir/config/pmd/pmd-rules.xml")
   pmd.toolVersion = '4.2.5'
+  pmdMain.ignoreFailures = true
   check.dependsOn(intTest)
   
   configurations.all {
