@@ -42,6 +42,8 @@ subprojects {
 
   findbugsTest.enabled = false
   pmdTest.enabled = false
+  pmd.ruleSetFiles = files("$rootDir/config/pmd/pmd-rules.xml")
+  pmd.toolVersion = '4.2.5'
   check.dependsOn(intTest)
   
   configurations.all {
