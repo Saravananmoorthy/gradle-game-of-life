@@ -3,8 +3,8 @@
 .settings
 .gradle/
 target
-build/
-*/build/
+build
+*/build
 .idea
 .classpath
 .checkstyle
