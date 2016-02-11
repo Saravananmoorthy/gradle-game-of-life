@@ -27,7 +27,7 @@ subprojects {
   task intTest(type: Test, dependsOn: testClasses) {
     include '**/integration/**/*'
     reports.html.destination "$buildDir/reports/intTest"
-    ignoreFailure = true
+    ignoreFailures = true
   }
 
   task jacocoIntTestReport(type: JacocoReport) {
